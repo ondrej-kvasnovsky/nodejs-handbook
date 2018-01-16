@@ -1,3 +1,4 @@
-# First Chapter
+# Experiments
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+This sections contains experiments and probably interesting but not very serious articles. 
+
