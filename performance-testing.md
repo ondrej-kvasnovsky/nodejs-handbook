@@ -2,7 +2,7 @@
 
 We usually want to generate a load for our services to measure the performance. Usually we want to do a certain set of operations every second, 5th second, minute or so.
 
-We are going to create script that will try to call REST API 5 times every second. 
+We are going to create script that will try to call REST API 5 times every second.
 
     const _ = require('lodash');
     const cron = require('node-cron');
@@ -52,7 +52,7 @@ We are going to create script that will try to call REST API 5 times every secon
 
     task.start();
 
-When we run the code, we can observe that couple of requests and with 200 but the rest will end with 403, becuase github will refuse too many requests. 
+When we run the code, we can observe that couple of requests and with 200 but the rest will end with 403, becuase github will refuse too many requests.
 
 > You can authenticate to make more requests.
 
@@ -75,6 +75,8 @@ Sent: 20, Received: 15, InProgress: 5
 Report: 403, 403, 403, 403, 403, 
 Sent: 20, Received: 20, InProgress: 0
 ```
+
+The code should also report how each request time and what is median, average and lets say 99th percentile. 
 
 
 
