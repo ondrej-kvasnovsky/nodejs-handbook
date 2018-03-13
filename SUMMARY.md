@@ -5,4 +5,5 @@
   * [Dependency Injection and AOP](chapter1/dependency-injection-and-aop.md)
 * [Performance Testing](performance-testing.md)
 * [Running Servers](running-servers.md)
+* [Node Version Manager](node-version-manager.md)
 
