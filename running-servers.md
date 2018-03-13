@@ -50,7 +50,7 @@ node --max_old_space_size=4096 index.js
 npm install -g pm2
 ```
 
-We are going to create a sample project that will use `pm2`. 
+We are going to create a sample project that will use `pm2`.
 
 First create `package.json` with required dependencies and scripts that are going to help us to run the code.
 
@@ -71,7 +71,6 @@ First create `package.json` with required dependencies and scripts that are goin
     "koa-router": "^7.4.0"
   }
 }
-
 ```
 
 Now we create `index.js` that will create `koa` HTTP server and user `koa-router` to route HTTP requests to our code.
@@ -94,14 +93,14 @@ app
 app.listen(3000);
 ```
 
-We are done with coding and we want to install dependencies and start the server. `npm start` will start single instance of NodeJS that will handle our requests. 
+We are done with coding and we want to install dependencies and start the server. `npm start` will start single instance of NodeJS that will handle our requests.
 
 ```
 $ npm install
 $ npm start
 ```
 
-Lets use all CPUs available and create multiple NodeJS instance on the server. 
+Lets use all CPUs available and create multiple NodeJS instance on the server.
 
 ```
 $ pm2 start -i max index.js
@@ -118,7 +117,7 @@ $ pm2 start -i max index.js
 [PM2] Process successfully started
 ```
 
-We can stop all the instances, still using pm2. 
+We can stop all the instances, still using pm2.
 
 ```
 $ pm2 stop index
@@ -133,24 +132,18 @@ $ pm2 stop index
 [PM2] [index](7) ✓
 ```
 
-Other useful commands are: 
+Other useful commands are:
 
 ```
+$ pm2 status
 $ pm2 show index
 $ pm2 monit
 $ pm2 restart index
 $ pm2 delete index
 $ pm2 kill
 $ npm install pm2@latest -g ; pm2 update
+$ pm2 scale index=2
 ```
-
-
-
-
-
-
-
-
 
 
 
