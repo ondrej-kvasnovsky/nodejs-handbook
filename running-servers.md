@@ -145,5 +145,15 @@ $ npm install pm2@latest -g ; pm2 update
 $ pm2 scale index=2
 ```
 
+### Make the server running when server starts up
+
+```
+$ npm i -g pm2
+$ pm2 start index.js
+$ pm2 startup
+$ pm2 save
+$ pm2 ls
+```
+
 
 
