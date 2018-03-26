@@ -2,7 +2,7 @@
 
 ### HTTP server with Router
 
-Create a project. 
+Create a project.
 
 ```
 $ mkdir koa-demo
@@ -33,14 +33,14 @@ It should result in `package.json` like this. I have added `start` script to eas
 }
 ```
 
-Then we need to create `index.js` that will start up the server and add router URL path mapping. 
+Then we need to create `index.js` that will start up the server and add router URL path mapping.
 
 ```
-var Koa = require('koa');
-var Router = require('koa-router');
+const Koa = require('koa');
+const Router = require('koa-router');
 
-var app = new Koa();
-var router = new Router();
+const app = new Koa();
+const router = new Router();
 
 router.get('/', (ctx, next) => {
   ctx.body = 'test response'
@@ -53,7 +53,7 @@ app
 app.listen(4444);
 ```
 
-Then we can run the server: 
+Then we can run the server:
 
 ```
 $ npm start
