@@ -15,7 +15,7 @@ const inconsistentRead = function(fileName, callback) {
     // callback(cache[fileName]);
     // make it asynchronous - and puts it before any IO event in the event loop
     process.nextTick(() => callback(cache[fileName]));
-    // make it asynchronous - and puts it at after all the IO events in the event loop
+    // or make it asynchronous - and puts it at after all the IO events in the event loop
     setImmediate(() => callback(cache[fileName]));
   } else {
     // invoked asynchronously
