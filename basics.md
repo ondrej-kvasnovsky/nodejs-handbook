@@ -1,10 +1,10 @@
 # Basics
 
-[Event demultiplexing](https://jsblog.insiderattack.net/event-loop-and-the-big-picture-nodejs-event-loop-part-1-1cb67a182810) is used to avoid waiting for I/O events and is design principle behind [Reactor pattern](https://hackernoon.com/the-node-js-system-51090c35dddc), which is the main principle in NodeJS - event loop.
+[Event demultiplexing](https://jsblog.insiderattack.net/event-loop-and-the-big-picture-nodejs-event-loop-part-1-1cb67a182810) is used to avoid waiting for I/O events and is design principle behind [Reactor pattern](https://hackernoon.com/the-node-js-system-51090c35dddc), which is the main principle in NodeJS - [event loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/).
 
-## Asynchronous and synchronous operations 
+## Asynchronous and synchronous operations
 
-We should avoid synchronous functions in the code because they block the event loop. We also shouldn't mix synchronous and asynchronous code in single function. 
+We should avoid synchronous functions in the code because they block the event loop. We also shouldn't mix synchronous and asynchronous code in single function.
 
 ```
 const fs = require('fs');
@@ -26,8 +26,6 @@ const inconsistentRead = function(fileName, callback) {
   }
 };
 ```
-
-
 
 
 
