@@ -1,5 +1,13 @@
 # Performance Testing
 
+## Using Tools
+
+[AB](https://httpd.apache.org/docs/2.4/programs/ab.html) is Apache HTTP server benchmarking tool. 
+
+[Siege](https://github.com/JoeDog/siege) is http load and benchmarking utility. 
+
+## Custom Solution
+
 We usually want to generate a load for our services to measure the performance. Usually we want to do a certain set of operations every second, 5th second, minute or so.
 
 We are going to create script that will try to call REST API 5 times every second.
@@ -76,7 +84,5 @@ Report: 403, 403, 403, 403, 403,
 Sent: 20, Received: 20, InProgress: 0
 ```
 
-The code should also report how each request time and what is median, average and lets say 99th percentile. 
-
-
+The code should also report how each request time and what is median, average and lets say 99th percentile.
 
